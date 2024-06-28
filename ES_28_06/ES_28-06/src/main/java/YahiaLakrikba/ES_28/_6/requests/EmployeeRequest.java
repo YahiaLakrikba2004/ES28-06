@@ -8,11 +8,11 @@ import lombok.Data;
 @Data
 public class EmployeeRequest {
 
-    @NotBlank(message = "First name cannot be empty")
+    @NotBlank(message = "Name cannot be empty")
     @Size(min = 4, max = 10, message = "Name must be between 4 and 10 characters")
     private String name;
 
-    @NotBlank(message = "Last name cannot be empty")
+    @NotBlank(message = "Surname cannot be empty")
     @Size(min = 4, max = 10, message = "Surname must be between 4 and 10 characters")
     private String sureName;
 
