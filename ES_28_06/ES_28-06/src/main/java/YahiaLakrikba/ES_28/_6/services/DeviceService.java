@@ -1,23 +1,22 @@
 package YahiaLakrikba.ES_28._6.services;
 
-
-
-
 import YahiaLakrikba.ES_28._6.entities.Device;
 import YahiaLakrikba.ES_28._6.entities.Employee;
 import YahiaLakrikba.ES_28._6.enums.DeviceStatus;
+
+import YahiaLakrikba.ES_28._6.exeptions.BadRequestException;
 import YahiaLakrikba.ES_28._6.exeptions.NotFoundException;
 import YahiaLakrikba.ES_28._6.repositories.DeviceRepository;
 import YahiaLakrikba.ES_28._6.requests.DevicePatchRequest;
 import YahiaLakrikba.ES_28._6.requests.DeviceRequest;
-import org.apache.coyote.BadRequestException;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional
 public class DeviceService {
 
     private final DeviceRepository deviceRepository;
@@ -83,7 +82,7 @@ public class DeviceService {
         }
         if (request.getEmployeeId() != null) {
             if (device.getStatus() == DeviceStatus.MAINTENANCE) {
-                throw new YahiaLakrikba.ES_28._6.exeptions.BadRequestException("Device is under maintenance");
+                throw new BadRequestException("Device is under maintenance");
             }
             Employee employee = employeeService.getEmployeeById(request.getEmployeeId());
             device.setStatus(DeviceStatus.ASSIGNED);
