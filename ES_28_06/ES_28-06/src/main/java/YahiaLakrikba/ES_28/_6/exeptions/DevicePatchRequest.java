@@ -1,4 +1,4 @@
-package YahiaLakrikba.ES_28._6.requests;
+package YahiaLakrikba.ES_28._6.exeptions;
 
 import YahiaLakrikba.ES_28._6.enums.DeviceStatus;
 import YahiaLakrikba.ES_28._6.enums.DeviceType;

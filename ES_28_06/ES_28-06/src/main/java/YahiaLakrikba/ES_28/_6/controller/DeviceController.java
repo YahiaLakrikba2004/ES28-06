@@ -4,7 +4,7 @@ import YahiaLakrikba.ES_28._6.entities.Device;
 
 import YahiaLakrikba.ES_28._6.exeptions.BadRequestException;
 import YahiaLakrikba.ES_28._6.exeptions.NotFoundException;
-import YahiaLakrikba.ES_28._6.requests.DeviceRequest;
+import YahiaLakrikba.ES_28._6.exeptions.DeviceRequest;
 import YahiaLakrikba.ES_28._6.services.DeviceService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -4,8 +4,8 @@ package YahiaLakrikba.ES_28._6.controller;
 import YahiaLakrikba.ES_28._6.entities.Employee;
 import YahiaLakrikba.ES_28._6.exeptions.BadRequestException;
 import YahiaLakrikba.ES_28._6.exeptions.NotFoundException;
-import YahiaLakrikba.ES_28._6.requests.EmployeePatchRequest;
-import YahiaLakrikba.ES_28._6.requests.EmployeeRequest;
+import YahiaLakrikba.ES_28._6.exeptions.EmployeePatchRequest;
+import YahiaLakrikba.ES_28._6.exeptions.EmployeeRequest;
 import YahiaLakrikba.ES_28._6.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 
